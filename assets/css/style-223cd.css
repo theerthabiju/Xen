@@ -1042,6 +1042,191 @@ body {
     z-index: 1;
   }
  
+  /* =========================banner 2 style ==================== */
+
+  /* ---- RESET ---- */
+  .xen-banner-section2 * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  /* ---- BANNER WRAPPER ---- */
+  .xen-banner-section2 {
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 60px 60px 60px 60px;
+  }
+ 
+  /* ---- BACKGROUND IMAGE LAYER ---- */
+  .xen-banner-section2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/banners/bg22.png");
+    background-size: cover !important;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 0;
+  }
+ 
+  /* ---- LIGHT OVERLAY (keeps text readable) ---- */
+  .xen-banner-section2::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+   
+    z-index: 1;
+  }
+
+
+  .xen-course-list-wrapper{
+   display: flex;
+   
+}
+
+.xen-course-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.xen-course-icon{
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    background: #003897;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.xen-course-icon i{
+    color: #fff;
+    font-size: 24px;
+}
+
+.xen-course-text{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1b2a52;
+}
+
+.xen-course-text span{
+    color: #1664e8;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+    .xen-course-list-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .xen-course-text{
+        font-size: 18px;
+    }
+
+    .xen-course-icon{
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* banner 3 style======================================= */
+
+.xen-course-list-wrapper3{
+   display: flex;
+   
+}
+
+ .xen-banner-section3 * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+ /* ---- BANNER WRAPPER ---- */
+  .xen-banner-section3 {
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 60px 60px 60px 60px;
+  }
+ 
+  /* ---- BACKGROUND IMAGE LAYER ---- */
+  .xen-banner-section3::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/banners/bg3.png");
+    background-size: cover !important;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 0;
+  }
+ 
+  /* ---- LIGHT OVERLAY (keeps text readable) ---- */
+  .xen-banner-section3::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+   
+    z-index: 1;
+  }
+  .xen-courses-grid3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  max-width: 768px;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .xen-course-card3 {
+    border-radius: 12px;
+    padding: 32px 30px 24px;
+    text-align: center;
+    
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: default;
+    backdrop-filter: blur(4px);
+  }
+  .xen-course-card3:hover {
+    box-shadow: 0 6px 20px rgba(30, 80, 180, 0.12);
+    transform: translateY(-2px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
   /* ---- DECORATIVE DOTS ---- */
   .xen-dot {
     position: absolute;
@@ -1139,54 +1324,6 @@ justify-content: center;
 
 
 
-
-/* 
-.xen-text-carousel {
-  position: relative;
-  overflow: hidden;
-}
-
-.xen-slide-item {
-  display: none;
-  opacity: 0;
-  animation: xenFadeIn 0.8s ease forwards;
-}
-
-#xen-s1:checked ~ .xen-slide-1,
-#xen-s2:checked ~ .xen-slide-2,
-#xen-s3:checked ~ .xen-slide-3 {
-  display: block;
-  opacity: 1;
-} */
-
-@keyframes xenFadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ── Dot indicators ── */
-.xen-carousel-dots {
-  display: flex;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.xen-dot-btn {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(27, 91, 191, 0.25);
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  display: block;
-}
-
-#xen-s1:checked ~ .xen-carousel-dots label:nth-child(1),
-#xen-s2:checked ~ .xen-carousel-dots label:nth-child(2),
-#xen-s3:checked ~ .xen-carousel-dots label:nth-child(3) {
-  background: #1b5bbf;
-  transform: scale(1.3);
-}
 
 
 
@@ -1433,7 +1570,7 @@ justify-content: center;
     transform: translateY(-2px);
   }
  
-  .xen-course-icon {
+  /* .xen-course-icon {
     width: 64px;
     height: 64px;
     background: rgba(45, 142, 239, 0.1);
@@ -1445,7 +1582,7 @@ justify-content: center;
     font-size: 52px;
     border: 1px solid rgba(45, 142, 239, 0.18);
     color: #1b5bbf;
-  }
+  } */
  
   .xen-course-label {
     color: #1a2a4a;
@@ -17461,9 +17598,11 @@ form#lostpasswordform .description {
 /* Default Button Style */
 
 .gray-bg {
-  /* background-color: #F8F8F8 !important */
-  background-color: #f9f9f9 ;
-}
+background: linear-gradient(
+  to top,
+  #f9f9f9 0%,
+  #ffffff 100%
+);}
 
 /* top header */
 
