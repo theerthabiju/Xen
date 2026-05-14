@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Xen Education</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" type="image/png" href="assets/images/favicon-1.png" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min3860.css?v=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/fonts/ionicons/css/ionicons.min3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/bootstrap.minf9e3.css?v=1.1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/slick/slick3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/magnific-popup/magnific-popup3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/animsition/animsition.min3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/animate/animate3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style-223cd.css?v=1.2.1" />
+  <!--===============================================================================================-->
+
+  <!-- template styles -->
+  <link rel="stylesheet" href="assets/css/eduhive.css" />
+
+</head>
+<style>
+  .coureslist {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+
+  .coureslist.show {
+    display: block;
+  }
+
+  .footernav,
+  .coureslist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footernav li {
+    cursor: pointer;
+    margin: 5px 0;
+  }
+
+  .footernav li:hover {
+    color: #b2d7fd;
+  }
+
+  .student-form {
+    background: #fffffffa;
+    padding: 50px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .student-label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  .student-button {
+    background: #0553a7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .student-button:hover {
+    background: #084f9b;
+  }
+</style>
+
+<body class="animsition wide-container">
+  <div id="wrapper-container">
+
+    <!-- Header -->
+    <header class="site-header sticky-header header-overlay layout-2 hight-light-first-letter">
+
+      <!-- ===== NEW TOP BAR ===== -->
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-bar-inner">
+            <!-- Left side: Contact Info -->
+            <div class="top-bar-left">
+              <a href="tel:+919746905919" class="top-contact">
+                <i class="fa fa-phone"></i> +91 6282 437 109
+              </a>
+              <span class="divider">|</span>
+              <a href="mailto:admissions@xeneducation.in" class="top-contact">
+                <i class="fa fa-phone"></i> +91 9746 905 919
+              </a>
+              <span class="divider">|</span>
+              <a href="mailto:admissions@xeneducation.in" class="top-contact">
+                <i class="fa fa-envelope"></i> admissions@xeneducation.in
+              </a>
+
+            </div>
+
+            <!-- Right side: Social Icons -->
+            <div class="top-bar-right">
+              <span class="follow-text">Follow Us:</span>
+              <a href="https://www.instagram.com/xeneducation/" target="_blank" class="top-social-icon">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/xeneducationbathery" target="_blank" class="top-social-icon">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/xen-education/" target="_blank" class="top-social-icon">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ===== END TOP BAR ===== -->
+
+      <!-- Main Header -->
+      <div class="header-inner element-to-stick">
+        <div class="container">
+          <div class="wrap-content-header">
+            <div class="header-logo">
+              <a href="index.html" class="logo">
+                <img src="assets/images/logo-022.png" alt="IMG" data-retina="assets/images/logo-022.png"
+                  data-sticky="assets/images/logo-022.png" data-mobile="assets/images/logo-022.png" />
+              </a>
+            </div>
+
+            <nav class="main-navigation">
+              <ul class="menu-lists">
+                <li class="menu-item-has-children">
+                  <a href="index.html"> Home </a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="About.html"> About </a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="courses.html"> Courses </a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="blog.html"> Blog </a>
+                </li>
+                <li>
+                  <a href="contact.html"> Contact </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="menu-right">
+              <!-- shortcode login popup -->
+              <div class="element-login-popup layout-1">
+                <!-- <div class="login-links">
+                  <li class="btn btn-primary" style="background-color: #003a78; border: none ">
+                    <a class="login" data-active=".box-login" data-effect="mfp-zoom-in" href="#bp-popup-login">
+                      Apply Now
+                    </a>
+                  </li>
+                </div> -->
+
+                 <div class="login-links" style="display: inline-block;">
+                  <a class="login btn btn-pan" data-active=".box-login" data-effect="mfp-zoom-in"
+                    href="#bp-popup-login">
+                    <span>Apply Now</span>
+                  </a>
+                </div>
+
+                <div id="bp-popup-login" class="white-popup mfp-with-anim mfp-hide" style="
+                border-radius: 20px;
+                height: 700px;
+                background-color: transparent;
+              ">
+                  <div class="loginwrapper">
+                    <div class="login-popup box-login">
+                      <div class="inner-login">
+                        <h3 class="title">
+                          <span class="current-title">Application Form</span>
+                        </h3>
+                        <div class="form-row">
+                          <div class="wrap-form">
+                            <form class="student-form">
+                              <!-- Name -->
+                              <label class="student-label" for="name">Full Name</label>
+                              <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+                              <!-- Email -->
+                              <label class="student-label" for="email">Email</label>
+                              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+                              <!-- Phone -->
+                              <label class="student-label" for="phone">Phone Number</label>
+                              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                pattern="[0-9]{10}" required />
+
+                              <!-- Qualification -->
+                              <label class="student-label" for="qualification">Qualification</label>
+                              <select id="qualification" name="qualification" required>
+                                <option value="">Select Qualification</option>
+                                <option value="+2">+2</option>
+                                <option value="graduation">Graduate</option>
+                                <option value="postgraduation">Post Graduate</option>
+                                <option value="others">Others</option>
+                              </select>
+
+                              <!-- Course -->
+                              <label class="student-label" for="course">Choose Course</label>
+                              <select id="course" name="course" required>
+                                <option value="">Select Course</option>
+                                <option value="course1">Creative Graphics</option>
+                                <option value="course2">Digital Marketing</option>
+                                <option value="course3">Full Stack Development</option>
+                                <option value="course4">UI/UX Design and Development</option>
+                                <option value="course5">Multimedia With Animation</option>
+                                <option value="course6">PHP Development</option>
+                                <option value="course7">Node JS Development</option>
+                                <option value="course8">Python Development</option>
+                              </select>
+
+                              <!-- DOB -->
+                              <label class="student-label" for="dob">Date of Birth</label>
+                              <input type="date" id="dob" name="dob" required />
+
+                              <!-- Location -->
+                              <label class="student-label" for="location">Location</label>
+                              <input type="text" id="location" name="location" placeholder="Enter your location"
+                                required />
+
+                              <!-- Submit -->
+                              <button class="student-button" type="submit">Apply</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end shortcode login -->
+
+              <!-- Button toggle menu-mobile -->
+              <div class="menu-mobile-effect navbar-toggle">
+                <div class="icon-wrap">
+                  <i class="ion-navicon"></i>
+                </div>
+              </div>
+              <!-- end Button toggle menu-mobile -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-menu-container mobile-effect">
+      <ul class="nav navbar-nav">
+        <li class="menu-item-has-children">
+          <a href="index.html"> Home </a>
+        </li>
+
+        <li class="menu-item-has-children">
+          <a href="About.html"> About </a>
+        </li>
+
+        <li class="menu-item-has-children">
+          <a href="courses.html"> Courses </a>
+        </li>
+
+        <li class="menu-item-has-children">
+          <a href="blog.html"> Blog </a>
+        </li>
+
+        <li>
+          <a href="contact.html"> Contact </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- end Header -->
+
+    <!-- Banner Section -->
+    <section class="wave-banner">
+      <div class="banner-content">
+        <div>
+          <p>
+            <a href="index.html" class="navigation" style="color: white">Home</a>
+            |
+            <a href="About.html" class="navigation-about" style="color: white">About</a>
+          </p>
+          <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 15px">
+            About Us
+          </h1>
+        </div>
+
+      </div>
+
+      <!-- Wave Shape -->
+      <!-- <div class="wave">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+      <path d="M0.00,49.98 C149.99,150.00 349.56,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" 
+            style="stroke: none; fill: #ffffff;"></path>
+    </svg>
+  </div> -->
+    </section>
+    <!-- Main content -->
+    <!-- about -->
+    <section class="aboutsection">
+      <div class="about-container container row">
+        <div class="col-md-6">
+          <img src="assets/images/home/xen-4.png" alt="about image" />
+        </div>
+
+        <div class="col-md-6">
+          <div class="element-heading layout-2 style-2 align-left" style="margin-bottom: 30px">
+            <h3 class="title">About Xen Education</h3>
+          </div>
+          <p style="font-size: 15px">
+            Unlock your creative potential with Xen Education one of the
+            leading digital marketing course providers in Wayanad. Dive into
+            the world of digital marketing with our comprehensive course,
+            including an exciting internship opportunity. Enhance your skills
+            in graphics designing through our specialized program in Wayanad,
+            catering to aspiring graphic designers. Enroll in Xen Education's
+            creative designing and digital marketing course in Wayanad to
+            unlock your creative potential and master the skills needed for a
+            successful career in the digital world.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- end about -->
+
+    <!-- study way start-->
+    <section class="journey">
+      <div class="element-heading layout-2 style-2 align-center" style="margin-bottom: 70px">
+        <h3 class="title">Where Learning Meets Opportunity</h3>
+      </div>
+
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Learn</h3>
+          <p>Master in-demand IT skills with expert guidance</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Practice</h3>
+          <p>Work on real-world projects to build confidence</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Internship</h3>
+          <p>Gain practical experience through our industry tie-ups</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Career</h3>
+          <p>Step into the IT world with strong foundations</p>
+        </div>
+      </div>
+    </section>
+    <!-- study way end-->
+
+    <!-- institute path start -->
+    <section class="stages container">
+      <div class="element-heading layout-2 style-2 align-center" style="margin-bottom: 50px">
+        <h3 class="title">Our Growth Journey</h3>
+      </div>
+      <div class="timeline">
+        <!-- Step 1 -->
+        <div class="stage">
+          <div class="main-circle" style="border-color: #97b6d4">
+            <div class="circle">01</div>
+          </div>
+
+          <h3 style="margin-bottom: 20px">A Humble Beginning</h3>
+          <p>
+            In 2018 , Xeventure IT Solutions was born in a small room with a
+            young, dynamic team determined to revolutionize the IT landscape.
+          </p>
+        </div>
+        <i class="bi bi-arrow-return-right" style="font-size: 40px; color: #00387a"></i>
+        <!-- Step 2 -->
+        <div class="stage">
+          <h3 style="margin-bottom: 20px">New Opportunities</h3>
+          <p>
+            On a mission to expand the IT-oriented job sectors in Wayanad, we
+            have introduced more career opportunities in digital marketing,
+            graphic designing, and web development.
+          </p>
+          <div class="main-2-circle" style="border-color:  #5c8dbe;">
+            <div class="circle">02</div>
+          </div>
+        </div>
+
+        <i class="bi bi-arrow-90deg-right" style="font-size: 40px; color: #00387a"></i>
+        <!-- Step 3 -->
+        <div class="stage">
+          <div class="main-circle" style="border-color: rgb(64, 120, 185); ">
+            <div class="circle">03</div>
+          </div>
+          <h3 style="margin-bottom: 20px">Growth & Expansion</h3>
+          <p>
+            With our exponential growth, we have expanded from our small space
+            to 1000 square feet. Then we doubled our space and amplified our
+            digital footprint along the way!
+          </p>
+        </div>
+        <!-- <i
+            class="bi bi-arrow-return-right"
+            style="font-size: 40px; color: #00387a"
+          ></i> -->
+
+        <!-- Step 4 -->
+        <div class="stage">
+          <h3 style="margin-bottom: 20px">Resilience in Crisis</h3>
+          <p>
+            Rising above the pandemic's storm, we embraced resilience!
+            Offering remote work options to our dedicated team, we defied the
+            IT industry crash and soared to new heights during the pandemic
+            hit.
+          </p>
+          <div class="main-2-circle" style="border-color:  rgb(64, 111, 165);">
+            <div class="circle">04</div>
+          </div>
+        </div>
+        <i class="bi bi-arrow-90deg-right" style="font-size: 40px; color: 1a4d8a"></i>
+
+        <!-- Step 5 -->
+        <div class="stage">
+          <div class="main-circle" style="border-color: #00387a">
+            <div class="circle">05</div>
+          </div>
+          <h3>A New Chapter</h3>
+          <p>
+            Today with 25+ exceptional employees and 50+ satisfied clients
+            spanning 20 countries, we proudly lead the way. Recognizing the
+            talent gap in Wayanad, we ignited Xen Education, empowering the
+            next generation of skilled professionals!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- institute path end -->
+
+
+    <section class="container whywestartcontainer">
+      <div class="why-we-start-content">
+        <div class="element-heading layout-2 style-2 align-center" style="margin-bottom: 50px">
+          <h3 class="title">Why We Start</h3>
+        </div>
+        <p class="paragraph">Discover the dynamic duo of successful careers in India: digital marketing and creative
+          designing. Set off on a journey filled with numerous
+          opportunities to realize your full potential in these booming industries. As one of the leading digital
+          marketing course providers in Wayanad
+          and offering a specialized graphics designing course in Wayanad, we understand the persistent shortage of
+          skilled professionals in this region.
+          So by recognizing the root cause, we took charge and introduced Xen Education,
+          the catalyst for unleashing boundless potential! Unlock your creative potential with Xen Education's
+          innovative Creative Designing and Digital
+          Marketing course in Wayanad.</p>
+      </div>
+    </section>
+
+
+    <!-- end Main content -->
+
+    <!-- Footer -->
+    <footer class="site-footer text-light pt-5">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Logo & Tagline -->
+          <div class="col-lg-4 col-md-6">
+            <img src="assets/images/logo-02.png" alt="Xen Education" class="mb-3" style="max-width: 180px" />
+            <h5 class="fw-bold">
+              Digital Marketing | Creative Graphic | Web Development
+            </h5>
+            <hr class="bg-light w-50" />
+            <p class="small">
+              Empowering students with career-focused training and
+              industry-recognized certifications.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h6 class="fw-bold text-uppercase mb-3">Quick Links</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html" class="text-light">Home</a></li>
+              <li><a href="About.html" class="text-light">About</a></li>
+              <li><a href="blog.html" class="text-light">Blog</a></li>
+              <li><a href="contact.html" class="text-light">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Courses -->
+          <div class="col-lg-3 col-md-6">
+            <h6 class="fw-bold text-uppercase mb-3">Courses</h6>
+            <ul class="list-unstyled footer-links">
+              <li>
+                <a href="creative.html" class="text-light">Creative Graphics</a>
+              </li>
+              <li>
+                <a href="digital.html" class="text-light">Digital Marketing</a>
+              </li>
+              <li>
+                <a href="uiux-dev.html" class="text-light">UI/UX Desiging and Development</a>
+              </li>
+              <li>
+                <a href="fullstack.html" class="text-light">Fullstack Development</a>
+              </li>
+              <li>
+                <a href="multimedia.html" class="text-light">Multimedia & Animation</a>
+              </li>
+              <li>
+                <a href="phpdev.html" class="text-light">Php Development</a>
+              </li>
+              <li>
+                <a href="node.html" class="text-light">Node.js Development</a>
+              </li>
+              <li>
+                <a href="python.html" class="text-light">Python Development</a>
+              </li>
+              <!-- <li>
+                <a href="videophoto.html" class="text-light">Videography & Photography</a>
+              </li> -->
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h6 class="fw-bold text-uppercase mb-3">Get in Touch</h6>
+            <p>
+              <i class="fa fa-phone me-2"></i><a href="tel:+916282437109" class="text-light">
+                (+91) 6282 437 109</a>
+            </p>
+            <p>
+              <i class="fa fa-phone me-2"></i><a href="tel:+917306463092" class="text-light">
+                (+91) 7306 463 092</a>
+            </p>
+            <p>
+              <i class="fa fa-phone me-2"></i><a href="tel:+919746905919" class="text-light">
+                (+91) 9746 905 919</a>
+            </p>
+            <p>
+              <i class="fa fa-map-marker me-2"></i> Chulliyode Road, Sultan
+              Bathery, Wayanad, Kerala 673592
+            </p>
+            <p>
+              <i class="fa fa-envelope-o me-2"></i><a href="mailto:admissions@xeneducation.in" class="text-light">
+                admissions@xeneducation.in</a>
+            </p>
+            <p>
+              <i class="fa fa-clock-o me-2"></i> Mon-Sat: 09:00 am – 6:00 pm
+              <br />
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+
+        <hr class="bg-light mt-4" />
+
+        <!-- Bottom Row -->
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0 small">
+              © <span id="currentYear"></span> <strong>Xen Education</strong>. All Rights Reserved. |
+              Developed by
+              <a href="https://xeventure.com/" target="_blank" class="">Xeventure</a>
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="list-inline mb-0 socials">
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/xeneducation/" target="_blank"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/xeneducationbathery" target="_blank"><i
+                    class="fa fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://x.com/Xen_education" target="_blank"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://in.pinterest.com/xen_education/" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/company/xen-education/" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com/@xeneducation" target="_blank"><i class="fa fa-youtube-play"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end Footer -->
+  </div>
+
+  <div id="back-to-top" class="btn-back-to-top">
+    <i class="ion ion-ios-arrow-thin-up"></i>
+  </div>
+
+  <script>
+    document
+      .getElementById("coursesToggle")
+      .addEventListener("click", function () {
+        document.getElementById("courseList").classList.toggle("show");
+      });
+  </script>
+
+  <!--===============================================================================================-->
+  <script src="assets/libs/jquery/jquery-3.4.1.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/bootstrap/popper3860.js?v=1"></script>
+  <script src="assets/libs/bootstrap/bootstrap.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/magnific-popup/jquery.magnific-popup.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/animsition/animsition.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/slick/slick.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/select2/select2.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/countdown/jquery.plugin.min3860.js?v=1"></script>
+  <script src="assets/libs/countdown/jquery.countdown.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/isotope/isotope.pkgd.min3860.js?v=1"></script>
+  <script src="assets/libs/isotope/modul3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/waypoint/jquery.waypoints.min3860.js?v=1"></script>
+  <script src="assets/libs/countterup/jquery.counterup.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/js/main3860.js?v=1"></script>
+</body>
+
+</html>

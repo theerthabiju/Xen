@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Xen Education</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/images/favicon-1.png" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/fonts/ionicons/css/ionicons.min3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/bootstrap.minf9e3.css?v=1.1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/slick/slick3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/magnific-popup/magnific-popup3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/animsition/animsition.min3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/libs/animate/animate3860.css?v=1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style-223cd.css?v=1.2.1" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="assets/css/eduhive.css" />
+
+</head>
+<style>
+  .coureslist {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+
+  .coureslist.show {
+    display: block;
+  }
+
+  .footernav,
+  .coureslist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footernav li {
+    cursor: pointer;
+    margin: 5px 0;
+  }
+
+  .footernav li:hover {
+    color: #b2d7fd;
+  }
+
+  .student-form {
+    background: #fffffffa;
+    padding: 50px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .student-label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  .student-button {
+    background: #0553a7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .student-button:hover {
+    background: #084f9b;
+  }
+</style>
+
+<body class="animsition wide-container">
+  <div id="wrapper-container">
+    <!-- Header -->
+    <header class="site-header sticky-header header-overlay layout-2 hight-light-first-letter">
+      <div class="header-inner element-to-stick">
+        <div class="container">
+          <div class="wrap-content-header">
+            <div class="header-logo">
+              <a href="index.html" class="logo">
+                <img src="assets/images/logo-022.png" alt="IMG" data-retina="assets/images/logo-022.png"
+                  data-sticky="assets/images/logo-022.png" data-mobile="assets/images/logo-022.png" />
+              </a>
+            </div>
+
+            <nav class="main-navigation">
+              <ul class="menu-lists">
+                <li class="menu-item-has-children">
+                  <a href="index.html"> Home </a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="About.html"> About </a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="courses.html"> Courses </a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="blog.html"> Blog </a>
+                </li>
+
+                <li>
+                  <a href="contact.html"> Contact </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="menu-right">
+              <!-- shortcode login popup -->
+              <div class="element-login-popup layout-1">
+                <div class="login-links" style="display: inline-block;">
+                  <a class="login btn btn-pan" data-active=".box-login" data-effect="mfp-zoom-in"
+                    href="#bp-popup-login">
+                    <span>Apply Now</span>
+                  </a>
+                </div>
+
+                <div id="bp-popup-login" class="white-popup mfp-with-anim mfp-hide" style="
+                      border-radius: 20px;
+                      height: 700px;
+                      background-color: transparent;
+                    ">
+                  <div class="loginwrapper">
+                    <!-- form register -->
+
+                    <!--end form register -->
+
+                    <!-- form login -->
+                    <div class="login-popup box-login">
+                      <div class="inner-login">
+                        <h3 class="title">
+                          <span class="current-title">Application Form</span>
+                        </h3>
+
+                        <div class="form-row">
+                          <div class="wrap-form">
+                            <form class="student-form">
+                              <!-- Name -->
+                              <label class="student-label" for="name">Full Name</label>
+                              <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+                              <!-- Email -->
+                              <label class="student-label" for="email">Email</label>
+                              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+                              <!-- Phone -->
+                              <label class="student-label" for="phone">Phone Number</label>
+                              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                pattern="[0-9]{10}" required />
+
+                              <!-- Qualification -->
+                              <label class="student-label" for="qualification">Qualification</label>
+                              <select id="qualification" name="qualification" required>
+                                <option value="">Select Qualification</option>
+                                <option value="+2">+2</option>
+                                <option value="graduation">Graduate</option>
+                                <option value="postgraduation">
+                                  Post Graduate
+                                </option>
+                                <option value="others">Others</option>
+                              </select>
+
+                              <!-- Course -->
+                              <label class="student-label" for="course">Choose Course</label>
+                              <select id="course" name="course" required>
+                                <option value="">Select Course</option>
+                                <option value="course1">
+                                  Creative Graphics
+                                </option>
+                                <option value="course2">
+                                  Digital Marketing
+                                </option>
+                                <option value="course3">
+                                  Full Stack Development
+                                </option>
+                                <option value="course4">
+                                  UI/UX Design and Development
+                                </option>
+                                <option value="course5">
+                                  Multimedia With Animation
+                                </option>
+                                <option value="course6">
+                                  PHP Development
+                                </option>
+                                <option value="course7">
+                                  Node JS Development
+                                </option>
+                                <option value="course8">
+                                  Python Development
+                                </option>
+                              </select>
+
+                              <!-- DOB -->
+                              <label class="student-label" for="dob">Date of Birth</label>
+                              <input type="date" id="dob" name="dob" required />
+
+                              <!-- Location -->
+                              <label class="student-label" for="location">Location</label>
+                              <input type="text" id="location" name="location" placeholder="Enter your location"
+                                required />
+
+                              <!-- Submit -->
+                              <button class="student-button" type="submit">
+                                Apply
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end form login -->
+                  </div>
+                </div>
+              </div>
+              <!-- end shortcode login -->
+
+              <!-- Button toggle menu-mobile -->
+              <div class="menu-mobile-effect navbar-toggle">
+                <div class="icon-wrap">
+                  <i class="ion-navicon"></i>
+                </div>
+              </div>
+              <!-- end Button toggle menu-mobile -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-menu-container mobile-effect">
+      <ul class="nav navbar-nav">
+        <li class="menu-item-has-children">
+          <a href="index.html"> Home </a>
+        </li>
+
+        <li class="menu-item-has-children">
+          <a href="About.html"> About </a>
+        </li>
+
+        <li class="menu-item-has-children">
+          <a href="courses.html"> Courses </a>
+        </li>
+
+        <li class="menu-item-has-children">
+          <a href="blog.html"> Blog </a>
+        </li>
+
+        <li>
+          <a href="contact.html"> Contact </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- end Header -->
+
+    <section class="wave-banner-blog">
+      <div class="banner-course-content">
+        <div class="bg-course">
+          <h2>PHP Development</h2>
+
+          <h4>Skills with Xen Education</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main content -->
+
+    <section class="creative-section">
+      <div class="container">
+        <div class="row creative-section-row">
+          <div class="col-md-6 creative-section-col">
+            <h1>PHP Development</h1>
+            <h5>SKILLS WITH XEN EDUCATION</h5>
+            <p class="paragraph">
+              Become a proficient developer by enrolling in our PHP
+              development course and acquiring the necessary skills. At the
+              best institute for PHP development in Wayanad, our extensive
+              curriculum covers everything from basics to advanced methods, so
+              it doesn't matter if you're a beginner or trying to expand your
+              skills. Here's another opportunity for you to excel in the
+              fast-paced field of web development with practical projects and
+              personalized training from professionals in the field.
+            </p>
+            <div class="element-button layout-1">
+              <a href="About.html" class="button">Apply Now </a>
+            </div>
+          </div>
+          <div class="col-md-6 creative-section-col">
+            <img class="butterimg img-responsive" src="assets/images/UIUX/UIUX7.png" alt="C1" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- courese deatiles -->
+    <section class="infography">
+      <div class="infographic">
+        <!-- Diamond Cards -->
+        <div class="card-box top">
+          <div class="content">
+            <div>
+              <div class="icon"><i class="bi bi-gear"></i></div>
+              <h5>8 Months Duration</h5>
+              <p>
+                Xen Education offers the best PHP development courses in
+                Wayanad, Which span a focused 8-month duration (6-month course
+                and 2-month internship).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box right">
+          <div class="content">
+            <div>
+              <div class="icon"><i class="bi bi-bullseye"></i></div>
+              <h5>30+ Modules</h5>
+              <p style="margin-right: 10px">
+                We provide training with 30+ modules, equipping you for
+                real-world success.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box left">
+          <div class="content">
+            <div>
+              <div class="icon"><i class="bi bi-person"></i></div>
+              <h5>₹40,000 Fees</h5>
+              <p style="margin-right: 20px">
+                Invest for your future at the best PHP development course in
+                Wayanad, offered at an attractive package of 40k, ensuring a
+                valuable return on your career advancement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 160px; margin-bottom: 100px">
+      <div class="container">
+        <div class="row creative-section-row">
+          <div class="col-md-6 creative-section-col">
+            <img class="butterimg img-responsive" src="assets/images/UIUX/UIUX1.png" alt="C1" />
+          </div>
+          <div class="col-md-6 creative-section-col">
+            <h1>A New Different Way To Improve Your Skills.</h1>
+            <p class="paragraph">
+              Let's continue on a dynamic journey to increase your
+              achievements in PHP development through our innovative path. We
+              present a state-of-the-art approach designed with your dynamism
+              to elevate your PHP development skills and provide a fresh
+              perspective. The goal is to build the practical skills that will
+              set you apart in the ever-evolving PHP development industry.
+              Hone your skills and get ahead in this rapidly changing
+              industry.
+              <br />
+              At Xen Education, the best PHP development institute in Wayanad,
+              we offer a new approach to enrich your PHP development skills.
+              Our program enables your PHP skills and encourages expressive
+              development. Our program enables your PHP skills and encourages
+              expressive development. With our guidance, we help you master
+              the development tools. It's a modern path to start a successful
+              career in PHP development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- head and sentence -->
+    <section class="creative-section4">
+      <div class="container creative-section4">
+        <div>
+          <h1>Window of Opportunities</h1>
+          <p class="paragraph">
+            We see XEN Education as the ultimate catalyst for opening many job
+            opportunities in the digital sector. Our Certified PHP Development
+            course in Wayanad is designed to provide a clear insight into the
+            vibrant areas of PHP development. Joining XEN Education goes
+            beyond learning. It's about opening up a world where your skills
+            unlock exciting and rewarding career paths.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- opportunity section -->
+    <section class="creative-section5">
+      <div class="container">
+        <!-- 1 -->
+        <div class="row opportinity-row">
+          <div class="col-md-6">
+            <img src="assets/images/UIUX/UIUX8.png" alt="" />
+          </div>
+          <div class="col-md-6 opportinity-col">
+            <h2 class="opportinity-text">
+              Become a<span class="designation">PHP Developer</span>
+            </h2>
+            <p class="paragraph">
+              Start your journey as a PHP developer with XEN Education. Expose
+              your creativity and learn visual storytelling in our various
+              courses. Our program enables you in the PHP development
+              industry, giving you the skills to prepare a great portfolio.
+              Discover the latest developing trends, effective visual
+              communication, and success strategies in the dynamic world of
+              PHP development. Join our extensive PHP development courses to
+              master PHP development, setting you up for a successful career.
+            </p>
+          </div>
+        </div>
+
+        <div class="row opportinity-row">
+          <div class="col-md-6 opportinity-col">
+            <h2 class="opportinity-text">
+              Become a <span class="designation"> Freelancer</span>
+            </h2>
+            <p class="paragraph">
+              Step into the next phase of your PHP development journey with
+              our comprehensive PHP development course designed specifically
+              for freelancers. We offer a course consisting of innovative
+              insights and technologies to elevate your real-world
+              experience-based skills to new heights. Gain hands-on experience
+              in database optimization strategies. Additionally, learn how to
+              build applications that are scalable and maintainable. You
+              confidently handle even the most complex projects. With
+              practical industry best practices and personalized feedback from
+              expert instructors, this course plays a role in enabling you to
+              become a PHP development specialist. Take your freelancing
+              career to the next level and open up new opportunities by
+              joining our PHP development course today.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="assets/images/UIUX/UIUX2.png" alt="" />
+          </div>
+        </div>
+
+        <div class="row opportinity-row">
+          <div class="col-md-6">
+            <img src="assets/images/UIUX/UIUX3.png" alt="" />
+          </div>
+          <div class="col-md-6 opportinity-col">
+            <h2 class="opportinity-text">
+              Become a <span class="designation"> Back-End Developer</span>
+            </h2>
+            <p class="paragraph">
+              After completing Xen Education's PHP development program, you
+              can start a rewarding career as a backend developer. This
+              skillset equips you with the expertise to craft robust and
+              scalable server-side applications using PHP, a widely adopted
+              and versatile programming language. With a solid foundation in
+              PHP, you can seamlessly integrate with popular front-end
+              frameworks like React or Angular, positioning yourself as a
+              valuable full-stack developer in high demand. The synergy
+              between PHP and front-end technologies empowers you to bridge
+              the gap between server-side and client-side functionalities,
+              cultivating a comprehensive skill set.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- opportunity list -->
+    <!-- opportunity list -->
+    <section class="creative-section04">
+      <div class="container">
+        <div>
+          <h1>Opportunities are Unlimited</h1>
+          <div class="task-container row">
+            <div class="col-md-12">
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                Back-End Developer
+              </div>
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                WordPress Developer
+              </div>
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                E-commerce Developer
+              </div>
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                API Developer
+              </div>
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                Cloud Architect
+              </div>
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                DevOps Engineer
+              </div>
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                PHP Developer
+              </div>
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                CMS Developer
+              </div>
+              <div class="task">
+                <div class="toggle">
+                  <div class="circle-toggle"></div>
+                </div>
+                PHP Framework Specialist
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- modules -->
+    <section class="creative-section6">
+      <h1 class="text-center">List Of Modules</h1>
+      <div class="container creative-section4">
+        <div class="tab-container">
+          <div class="tabs">
+            <button class="active" data-tab="module1">
+              Fundamentals of Web & PHP
+            </button>
+            <button data-tab="module2">PHP & MySQL Integration</button>
+            <button data-tab="module3">
+              AJAX & Advanced Web Programming
+            </button>
+            <button data-tab="module4">Laravel Framework</button>
+            <button data-tab="module5">Learning Outcomes</button>
+          </div>
+
+          <!-- Module 1 -->
+          <div id="module1" class="tab-content active">
+            <h3>Fundamentals of Web & PHP</h3>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Topic</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Introduction to Web Technology</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Scripting Languages</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Arrays</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Classes and Objects</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Abstract Classes</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Validation in PHP – Understanding the Preliminaries</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Introduction to Web & Internet</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Introduction to Server</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Understanding Localhost Server</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Starting PHP</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Module 2 -->
+          <div id="module2" class="tab-content">
+            <h3>PHP & MySQL Integration</h3>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Topic</th>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>PHP MySQL Connectivity</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Integrating Web Forms and Database</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>PHP’s MySQL Extension</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Exception Handling</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Session Handling</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>MySQL Data Types</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>DML and DDL</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Database Programming</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Module 3 -->
+          <div id="module3" class="tab-content">
+            <h3>AJAX & Advanced Web Programming</h3>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Topic</th>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>AJAX Introduction</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>AJAX Database Programming with jQuery</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Module 4 -->
+          <div id="module4" class="tab-content">
+            <h3>Laravel Framework</h3>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Topic</th>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>Overview & Installation of Laravel</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>Laravel Features</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>Application Structure of Laravel</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>Configuration</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>Routing</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>Controllers</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>Views</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>Model</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>Redirections</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>Migration & Seeding</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td>Web Packing</td>
+              </tr>
+              <tr>
+                <td>32</td>
+                <td>Laravel Queue</td>
+              </tr>
+              <tr>
+                <td>33</td>
+                <td>API</td>
+              </tr>
+              <tr>
+                <td>34</td>
+                <td>Blade Templates</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Module 5 -->
+          <div id="module5" class="tab-content">
+            <h3>Learning Outcomes</h3>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>What You Will Learn</th>
+              </tr>
+              <tr>
+                <td>35</td>
+                <td>What you will learn after PHP Development</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- different -->
+    <section class="creative-section7">
+      <div class="Different container">
+        <div class="row">
+          <div class="col-md-6 creative-section-col">
+            <h1>What Makes Us Different</h1>
+            <h5>Why Should You Learn PHP Development?</h5>
+            <img class="diiferent-img img-responsive" src="assets/images/UIUX/UIUX5.png" alt="C1" />
+          </div>
+          <div class="col-md-6">
+            <div class="main-diiferents">
+              <div class="md-1">
+                <h6 id="practical-heading" style="cursor: pointer">
+                  Practical Learning
+                </h6>
+                <p id="practical-text" style="display: none">
+                  We prioritize practical learning as the core of our
+                  approach. We go beyond theory, providing hands-on
+                  experiences that empower our students to apply their
+                  knowledge in real-world scenarios.
+                </p>
+              </div>
+              <div class="md-1">
+                <h6>Daily Exams</h6>
+                <p style="display: none">
+                  Xen Education, the best PHP development institute in
+                  Wayanad, bridges the gap between learning and practice
+                  through daily exams. Our students take theoretical and
+                  practical exams daily to enhance their academic excellence.
+                </p>
+              </div>
+              <div class="md-1">
+                <h6>Working For Real Clients</h6>
+                <p style="display: none">
+                  One of the key elements that sets Xen Education apart is our
+                  commitment to students by providing an opportunity to work
+                  with real clients. They can actively participate in projects
+                  that involve genuine client work.
+                </p>
+              </div>
+              <div class="md-1">
+                <h6>Placement Assistance</h6>
+                <p style="display: none">
+                  At Xen Education, our commitment extends beyond training;
+                  we're dedicated to launching our students' careers. Our 100%
+                  placement assistance program includes mock interviews,
+                  resume preparation, and industry connections to ensure
+                  you're well-prepared for success.
+                </p>
+              </div>
+              <div class="md-1">
+                <h6>Internship Opportunity</h6>
+                <p style="display: none">
+                  Xen Education provides a two-month internship program where
+                  students work on real-world projects, allowing them to apply
+                  their theoretical knowledge in practical settings.
+                </p>
+              </div>
+              <div class="md-1">
+                <h6>Focus on Innovation</h6>
+                <p style="display: none">
+                  We encourage innovative thinking and creativity, fostering
+                  an environment where students can explore new ideas and
+                  methodologies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Gain  -->
+    <section class="creative-section8">
+      <div class="gain-div">
+        <h1 class="text-center">
+          What you will learn after UI/UX Design and Development Course
+        </h1>
+      </div>
+
+      <div class="gain-cards">
+        <div class="card gain-card">
+          <div class="gaincard-img">
+            <img src="assets/images/creative/1232.png" alt="card-img" />
+          </div>
+          <div class="gaincard-title">
+            <h4>Mastery Of PHP Development</h4>
+          </div>
+          <div class="gaincard-body">
+            <p class="gain-para">
+              After finishing the PHP Development Course at XEN Education, you
+              can create engaging and user-centric digital experiences as a
+              PHP development specialist. Throughout this course, you will
+              learn how to use a PHP programming language in the real world.
+            </p>
+          </div>
+        </div>
+        <div class="card gain-card">
+          <div class="gaincard-img">
+            <img src="assets/images/creative/1231.png" alt="card-img" />
+          </div>
+          <div class="gaincard-title">
+            <h4>Proficiency In Advanced Software</h4>
+          </div>
+          <div class="gaincard-body">
+            <p class="gain-para">
+              By completing XEN Education's PHP development Course, you will
+              acquire expertise in industry-standard software tools such as
+              Aptana, NetBeans, and Eclipse. These PHP development software
+              skills will empower you to transform your creative concepts into
+              reality.
+            </p>
+          </div>
+        </div>
+        <div class="card gain-card">
+          <div class="gaincard-img">
+            <img src="assets/images/creative/1233.png" alt="card-img" />
+          </div>
+          <div class="gaincard-title">
+            <h4>Expertise In PHP Frameworks</h4>
+          </div>
+          <div class="gaincard-body">
+            <p class="gain-para">
+              After this PHP development course, you will gain expertise in
+              popular frameworks like Laravel, Symfony, or CodeIgniter to
+              enhance your development speed, code organization, and security.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="gain-cards">
+        <div class="card gain-card">
+          <div class="gaincard-img">
+            <img src="assets/images/creative/1234.png" alt="card-img" />
+          </div>
+          <div class="gaincard-title">
+            <h4>Full-Stack Development</h4>
+          </div>
+          <div class="gaincard-body">
+            <p class="gain-para">
+              After completing the PHP development course, consider learning
+              front-end technologies like HTML, CSS, and JavaScript. It equips
+              you to build complete web applications and expand your career
+              opportunities
+            </p>
+          </div>
+        </div>
+        <div class="card gain-card">
+          <div class="gaincard-img">
+            <img src="assets/images/creative/1235.png" alt="card-img" />
+          </div>
+          <div class="gaincard-title">
+            <h4>Database Interaction</h4>
+          </div>
+          <div class="gaincard-body">
+            <p class="gain-para">
+              You will gain valuable skills in writing SQL queries for
+              interacting with the database, enabling you to insert, update,
+              and delete data as needed. Furthermore, you'll gain the skills
+              to design and implement efficient database schemas, optimizing
+              data storage and retrieval for the specific requirements of your
+              applications.
+            </p>
+          </div>
+        </div>
+        <div class="card gain-card">
+          <div class="gaincard-img">
+            <img src="assets/images/creative/1236.png" alt="card-img" />
+          </div>
+          <div class="gaincard-title">
+            <h4>Build Web Services</h4>
+          </div>
+          <div class="gaincard-body">
+            <p class="gain-para">
+              After completing the PHP development course, you'll empower
+              yourself to create APIs that unlock your application's
+              potential. By leveraging PHP frameworks like Laravel or Lumen,
+              you'll gain access to robust tools designed specifically for API
+              development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 point -->
+    <section class="creative-section10">
+      <div class="col-md-6 creative-section-col container">
+        <h1>Enriching Internship program</h1>
+        <p>
+          We offer exhilarating internships guided by seasoned professionals.
+          Gain hands-on experience, harness industry insights, and propel your
+          career forward under the mentorship of experts.
+        </p>
+      </div>
+      <div class="tenpoints-div container">
+        <div class="row tenpointrow1">
+          <div class="torn-card">Mentorship and Guidance</div>
+          <div class="torn-card">Career Growth</div>
+          <div class="torn-card">Industry Certification Partnerships</div>
+        </div>
+
+        <div class="row tenpointrow1">
+          <div class="torn-card">AI-Driven Learning</div>
+          <div class="torn-card">Industry Insight view</div>
+          <div class="torn-card">Networking Opportunities</div>
+          <div class="torn-card">Real-time Working Environment</div>
+        </div>
+        <div class="row tenpointrow1">
+          <div class="torn-card">Skill Development Section</div>
+          <div class="torn-card">Potential Job Offers</div>
+          <div class="torn-card">Hands-on projects</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials of students -->
+
+    <!-- <section class="testimonial-section">
+        <div class="gain-div" style="margin-bottom: 80px">
+          <h1 class="text-center">What Our Students Say About Us</h1>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  Career change is never easy, but my journey with Xen Education
+                  made me realize it’s not rocket science. As a UI/UX
+                  Development student, I received the right guidance and
+                  practical training. Today, I’ve successfully transitioned into
+                  my new role as a Frontend Developer at Xeventure IT Solutions.
+                  Thanks to Xen Education, my career is now on the right path
+                  and truly settled.
+                </p>
+                <p class="testimonial-author">THEERTHA BIJU</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  I had a great learning journey at Xen Education. The UI/UX
+                  Development course was very well structured, and the trainers
+                  were supportive throughout. After completing the course, I
+                  also got the opportunity to do an internship provided by Xen
+                  Education, which gave me real industry experience. Today, I’m
+                  successfully placed, and I’m truly thankful to Xen Education
+                  for shaping my career.
+                </p>
+                <p class="testimonial-author">JASEEM K S</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section> -->
+
+    <!-- other course explore -->
+    <section class="creative-section12 container">
+      <div class="col-md-6 creative-section-col container" style="margin-top: 150px">
+        <h1 class="text-md-start">Explore Other Courses</h1>
+      </div>
+      <div class="other-course">
+        <div class="row othercourse-row">
+          <div class="other-course1 col-md-3">
+            <a href="digital.html" style="text-decoration: none; color: black">
+              <p class="d-para">Digital Marketing</p>
+              <p style="font-size: 15px">
+                Digital marketing is online advertising, promoting, and
+                engaging with customers via digital channels such as websites,
+                social media, and email.
+              </p>
+            </a>
+          </div>
+          <div class="other-course1 col-md-3">
+            <a href="fullstack.html" style="text-decoration: none; color: black">
+              <p class="d-para">Full Stack Development</p>
+              <p style="font-size: 15px">
+                Full stack development encompasses creating front-end and
+                back-end parts of web applications, enabling end-to-end
+                functionality and user interaction.
+              </p>
+            </a>
+          </div>
+          <div class="other-course1 col-md-3">
+            <a href="creative.html" style="text-decoration: none; color: black">
+              <p class="d-para">Creative Graphics</p>
+              <p style="font-size: 15px">
+                Creative Graphics involves crafting innovative and visually
+                captivating content, utilizing artistic skills and digital
+                tools to express ideas, emotions, and concepts. .
+              </p>
+            </a>
+          </div>
+          <div class="other-course1 col-md-3">
+            <a href="multimedia.html" style="text-decoration: none; color: black">
+              <p class="d-para">Multimedia With Animation</p>
+              <p style="font-size: 15px">
+                Multimedia with animation involves combining graphics, images,
+                videos, sound, and motion effects into dynamic visual
+                presentations.
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="row othercourse-row">
+          <div class="other-course1 col-md-4">
+            <a href="uiux-dev.html" style="text-decoration: none; color: black">
+              <p class="d-para">UI/UX Design and Development</p>
+              <p style="font-size: 15px">
+                Our UI/UX Design and Development course covers visual design,
+                user experience, and hands-on skills to build engaging,
+                user-friendly web applications.
+              </p>
+            </a>
+          </div>
+          <div class="other-course1 col-md-4">
+            <a href="node.html" style="text-decoration: none; color: black">
+              <p class="d-para">Node JS Development</p>
+              <p style="font-size: 15px">
+                Node.js enables building server-side applications using
+                JavaScript, enabling full-stack development and seamless user
+                experiences.
+              </p>
+            </a>
+          </div>
+          <div class="other-course1 col-md-4">
+            <a href="python.html" style="text-decoration: none; color: black">
+              <p class="d-para">Python Development</p>
+              <p style="font-size: 15px">
+                Python development involves creating applications and systems
+                using the Python programming language, which is a versatile
+                and high-level language.
+              </p>
+            </a>
+          </div>
+          <!-- <div class="other-course1 col-md-3">
+              <a
+                href="videophoto.html"
+                style="text-decoration: none; color: black"
+              >
+                <p class="d-para">Videography & Photography</p>
+                <p style="font-size: 15px">
+                  Join us at Xen Education and explore the world of videography
+                  and photography with guidance from industry experts
+                </p>
+              </a>
+            </div> -->
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end Main content -->
+
+  <!-- Footer -->
+  <footer class="site-footer text-light pt-5">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Logo & Tagline -->
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/logo-02.png" alt="Xen Education" class="mb-3" style="max-width: 180px" />
+          <h5 class="fw-bold">
+            Digital Marketing | Creative Graphic | Web Development
+          </h5>
+          <hr class="bg-light w-50" />
+          <p class="small">
+            Empowering students with career-focused training and
+            industry-recognized certifications.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold text-uppercase mb-3">Quick Links</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html" class="text-light">Home</a></li>
+            <li><a href="About.html" class="text-light">About</a></li>
+            <li><a href="blog.html" class="text-light">Blog</a></li>
+            <li><a href="contact.html" class="text-light">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Courses -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-uppercase mb-3">Courses</h6>
+          <ul class="list-unstyled footer-links">
+            <li>
+              <a href="creative.html" class="text-light">Creative Graphics</a>
+            </li>
+            <li>
+              <a href="digital.html" class="text-light">Digital Marketing</a>
+            </li>
+            <li>
+              <a href="uiux-dev.html" class="text-light">UI/UX Desiging and Development</a>
+            </li>
+            <li>
+              <a href="fullstack.html" class="text-light">Fullstack Development</a>
+            </li>
+            <li>
+              <a href="multimedia.html" class="text-light">Multimedia & Animation</a>
+            </li>
+            <li>
+              <a href="phpdev.html" class="text-light">Php Development</a>
+            </li>
+            <li>
+              <a href="node.html" class="text-light">Node.js Development</a>
+            </li>
+            <li>
+              <a href="python.html" class="text-light">Python Development</a>
+            </li>
+            <!-- <li>
+                <a href="videophoto.html" class="text-light"
+                  >Videography & Photography</a
+                >
+              </li> -->
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-uppercase mb-3">Get in Touch</h6>
+          <p>
+            <i class="fa fa-phone me-2"></i><a href="tel:+916282437109" class="text-light">
+              (+91) 6282 437 109</a>
+          </p>
+          <p>
+            <i class="fa fa-phone me-2"></i><a href="tel:+917306463092" class="text-light">
+              (+91) 7306 463 092</a>
+          </p>
+          <p>
+            <i class="fa fa-phone me-2"></i><a href="tel:+919746905919" class="text-light">
+              (+91) 9746 905 919</a>
+          </p>
+          <p>
+            <i class="fa fa-map-marker me-2"></i> Chulliyode Road, Sultan
+            Bathery, Wayanad, Kerala 673592
+          </p>
+          <p>
+            <i class="fa fa-envelope-o me-2"></i><a href="mailto:admissions@xeneducation.in" class="text-light">
+              admissions@xeneducation.in</a>
+          </p>
+          <p>
+            <i class="fa fa-clock-o me-2"></i> Mon-Sat: 09:00 am – 6:00 pm
+            <br />
+            Sunday: Closed
+          </p>
+        </div>
+      </div>
+
+      <hr class="bg-light mt-4" />
+
+      <!-- Bottom Row -->
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 small">
+            © <span id="currentYear"></span> <strong>Xen Education</strong>. All Rights Reserved. |
+            Developed by
+            <a href="https://xeventure.com/" target="_blank" class="">Xeventure</a>
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <ul class="list-inline mb-0 socials">
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/xeneducation/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/xeneducationbathery" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://x.com/Xen_education" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://in.pinterest.com/xen_education/" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/company/xen-education/" target="_blank"><i
+                  class="fa fa-linkedin"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/@xeneducation" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end Footer -->
+
+  <div id="back-to-top" class="btn-back-to-top">
+    <i class="ion ion-ios-arrow-thin-up"></i>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tabs button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active"));
+        contents.forEach((c) => c.classList.remove("active"));
+
+        tab.classList.add("active");
+        document
+          .getElementById(tab.getAttribute("data-tab"))
+          .classList.add("active");
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll(".toggle").forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+      });
+    });
+  </script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+  </script>
+
+  <script>
+    document
+      .getElementById("coursesToggle")
+      .addEventListener("click", function () {
+        document.getElementById("courseList").classList.toggle("show");
+      });
+  </script>
+  <script>
+    // Select all headings inside md-1 divs
+    const mdSections = document.querySelectorAll(".md-1 h6");
+
+    mdSections.forEach((heading) => {
+      heading.style.cursor = "pointer"; // show pointer on hover
+      heading.addEventListener("click", () => {
+        const paragraph = heading.nextElementSibling;
+        paragraph.style.display =
+          paragraph.style.display === "none" ? "block" : "none";
+      });
+    });
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".swiper", {
+      loop: true,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      loop: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/jquery/jquery-3.4.1.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/bootstrap/popper3860.js?v=1"></script>
+  <script src="assets/libs/bootstrap/bootstrap.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/magnific-popup/jquery.magnific-popup.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/animsition/animsition.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/slick/slick.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/select2/select2.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/countdown/jquery.plugin.min3860.js?v=1"></script>
+  <script src="assets/libs/countdown/jquery.countdown.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/isotope/isotope.pkgd.min3860.js?v=1"></script>
+  <script src="assets/libs/isotope/modul3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/libs/waypoint/jquery.waypoints.min3860.js?v=1"></script>
+  <script src="assets/libs/countterup/jquery.counterup.min3860.js?v=1"></script>
+  <!--===============================================================================================-->
+  <script src="assets/js/main3860.js?v=1"></script>
+</body>
+
+</html>
