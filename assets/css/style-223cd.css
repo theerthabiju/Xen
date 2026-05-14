@@ -1217,8 +1217,87 @@ body {
   }
 
 
+/* banner 3 sylabus section */
+.xen-syllabus-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
 
+.xen-syllabus-card{
+    background: #fff;
+    border-radius: 28px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
 
+.xen-syllabus-image img{
+    width: 180px;
+    max-width: 100%;
+}
+
+.xen-syllabus-content{
+    flex: 1;
+}
+
+.xen-syllabus-content h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #2f2483;
+    margin-bottom: 18px;
+}
+
+.xen-sub-text{
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.xen-syllabus-content ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.xen-syllabus-content ul li{
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.xen-syllabus-content ul li span{
+    margin-right: 8px;
+}
+
+.xen-syllabus-content ul li strong{
+    color: #2f2483;
+}
+
+/* Responsive */
+@media(max-width:991px){
+
+    .xen-syllabus-section{
+        grid-template-columns: 1fr;
+    }
+
+    .xen-syllabus-card{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .xen-syllabus-content h3{
+        font-size: 28px;
+    }
+
+    .xen-syllabus-content ul li{
+        font-size: 15px;
+    }
+}
 
 
 
