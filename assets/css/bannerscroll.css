@@ -1,0 +1,51 @@
+
+
+.xen-banner-slider-wrapper {
+    position: relative;
+}
+
+.xen-banner-slider-wrapper .xen-slide {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.xen-banner-slider-wrapper .xen-slide:nth-child(1) {
+    z-index: 1;
+}
+
+.xen-banner-slider-wrapper .xen-slide:nth-child(2) {
+    z-index: 2;
+}
+
+.xen-banner-slider-wrapper .xen-slide:nth-child(3) {
+    z-index: 3;
+}
+
+.xen-banner-slider-wrapper .xen-slide section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.xen-banner-slider-wrapper .xen-slides-track {
+    display: block !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.xen-banner-slider-wrapper .xen-slider-arrow,
+.xen-banner-slider-wrapper .xen-slider-dots {
+    display: none !important;
+}
+
+.xen-banner-slider-wrapper .xen-slide section {
+    transform-origin: center top;
+    transition: transform 0.1s linear;
+}
