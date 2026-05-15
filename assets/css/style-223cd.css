@@ -1125,7 +1125,7 @@ body {
 }
 
 .xen-banner-inner2 {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding-top: 20px;
 }
 
@@ -1458,7 +1458,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("../images/banners/bg22.png");
+  /* background-image: url("../images/banners/bg22.png"); */
   background-size: cover !important;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -1527,7 +1527,69 @@ body {
     min-width: 50px;
   }
 }
+/* ====== Banner 2 — Right Image Side ====== */
+.xen-banner-inner2 {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
 
+.xen-banner-right2 {
+  width: 45%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xen-banner-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.xen-banner-img-wrap img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.xen-img-badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #003a78;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 20px;
+}
+
+.xen-img-stat {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  font-size: 13px;
+  color: #555;
+}
+
+.xen-img-stat strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: #003a78;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .xen-banner-inner2 { flex-direction: column; }
+  .xen-banner-right2 { width: 100%; max-width: 480px; margin: 0 auto; }
+}
 
 /* ============================================================
    4. BANNER 3 — Graphic Design Banner
@@ -1535,11 +1597,9 @@ body {
 
 .xen-banner-section3 {
   position: relative;
-  overflow: hidden;
-  min-height: 600px;
   display: flex;
   align-items: center;
-  padding: 60px 60px 100px;
+padding-bottom: 100px;
 }
 
 /* Background image */
@@ -1547,11 +1607,16 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("../images/banners/bg3.png");
+background: linear-gradient(
+  to top,
+  #d9ecffc5 0%,
+  #ffffff 100%
+);  /* background-image: url("../images/banners/bg3.png"); */
   background-size: cover !important;
   background-position: center bottom;
   background-repeat: no-repeat;
   opacity: 1;
+  
   z-index: 0;
 }
 
@@ -1565,12 +1630,13 @@ body {
 /* ---- Course Cards Grid (Banner 3) ---- */
 .xen-courses-grid3 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  max-width: 768px;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
   margin: 20px 0 28px;
+  text-align: center;
+  
 }
 
 .xen-course-card3 {
@@ -2367,6 +2433,7 @@ body {
 
 .xen-banner-right {
   min-width: 0;
+  
 }
 
 /* Slider: never wider than viewport */
