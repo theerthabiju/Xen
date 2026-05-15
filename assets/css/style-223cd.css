@@ -5661,13 +5661,13 @@ th {
 
 .contact-form button {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
-  color: #003a78;
+  color: #ffffff;
   text-transform: uppercase;
-  background-color: transparent;
+  background-color: #003a78;
   display: inline-block;
-  padding: 0px 0px 6px 0px;
+  padding: 10px 0px 16px 0px;
   position: relative;
   margin-top: 33px;
   transition: all 0.5s;
@@ -18668,15 +18668,6 @@ form#lostpasswordform .description {
 }
 
 /* ── CATEGORY TABS ── */
-.faq-cats {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 36px 24px 0;
-  max-width: 860px;
-  margin: 0 auto;
-}
-
 .cat-btn {
   background: #fff;
   border: 1.5px solid var(--border);
@@ -18933,8 +18924,5 @@ form#lostpasswordform .description {
     padding: 28px 20px;
    
   }
-  .faq-cats {
-  display: flex ;
-flex-wrap : wrap;
-}
+
 }

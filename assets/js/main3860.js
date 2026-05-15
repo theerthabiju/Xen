@@ -1345,3 +1345,20 @@ document.getElementById('currentYear').textContent = new Date().getFullYear();
       header.classList.remove('scrolled');
     }
   });
+  function toggle(item) {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      }
+
+      function filterCat(cat, btn) {
+        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.faq-group').forEach(g => {
+          g.style.display = (cat === 'all' || g.dataset.cat === cat) ? 'block' : 'none';
+        });
+      }
+
+        document.getElementById('xen-close-btn').addEventListener('click', function () {
+        document.querySelector('.navbar-toggle').click();
+      });
