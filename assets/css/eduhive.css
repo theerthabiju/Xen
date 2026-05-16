@@ -2286,7 +2286,7 @@ a:hover .instructor-card-two__social__icon {
   text-transform: capitalize;
 }
 .course-card__btn {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .course-card--two {
   padding: 0;

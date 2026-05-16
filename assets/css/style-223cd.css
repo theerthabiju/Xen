@@ -1171,7 +1171,19 @@ body {
   margin-bottom: 18px;
 }
 
+.xen-sub-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #112060;
+  margin-bottom: 18px;
+}
+
 .xen-banner-title .xen-highlight {
+  color: #2563d6;
+}
+
+.xen-sub-title .xensub-highlight {
   color: #2563d6;
 }
 
@@ -1271,6 +1283,29 @@ body {
   right: 18px;
 }
 
+.xen-dot-5 {
+  width: 14px;
+  height: 14px;
+  background: #2563c7;
+  bottom: 100px;
+  left: 202px;
+}
+
+.xen-dot-6 {
+  width: 16px;
+  height: 16px;
+  background: #2563c7;
+  top: 98%;
+  right: 355px;
+}
+
+.xen-dot-7 {
+  width: 16px;
+  height: 16px;
+  background: #2563c7;
+  top: 20%;
+  right: 88px;
+}
 
 /* ============================================================
    2. BANNER 1 — General / Home Banner (with form)
@@ -1527,6 +1562,7 @@ body {
     min-width: 50px;
   }
 }
+
 /* ====== Banner 2 — Right Image Side ====== */
 .xen-banner-inner2 {
   display: flex;
@@ -1573,7 +1609,7 @@ body {
   background: #fff;
   border-radius: 12px;
   padding: 10px 18px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   font-size: 13px;
   color: #555;
 }
@@ -1587,8 +1623,15 @@ body {
 
 /* Responsive */
 @media (max-width: 991px) {
-  .xen-banner-inner2 { flex-direction: column; }
-  .xen-banner-right2 { width: 100%; max-width: 480px; margin: 0 auto; }
+  .xen-banner-inner2 {
+    flex-direction: column;
+  }
+
+  .xen-banner-right2 {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
 }
 
 /* ============================================================
@@ -1599,7 +1642,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 /* Background image */
@@ -1607,16 +1650,15 @@ padding-bottom: 100px;
   content: '';
   position: absolute;
   inset: 0;
-background: linear-gradient(
-  to top,
-  #d9ecffc5 0%,
-  #ffffff 100%
-);  /* background-image: url("../images/banners/bg3.png"); */
+  background: linear-gradient(to top,
+      #d9ecffc5 0%,
+      #ffffff 100%);
+  /* background-image: url("../images/banners/bg3.png"); */
   background-size: cover !important;
   background-position: center bottom;
   background-repeat: no-repeat;
   opacity: 1;
-  
+
   z-index: 0;
 }
 
@@ -1636,7 +1678,7 @@ background: linear-gradient(
   justify-content: center !important;
   margin: 20px 0 28px;
   text-align: center;
-  
+
 }
 
 .xen-course-card3 {
@@ -2433,7 +2475,7 @@ background: linear-gradient(
 
 .xen-banner-right {
   min-width: 0;
-  
+
 }
 
 /* Slider: never wider than viewport */
@@ -3286,7 +3328,7 @@ th {
 
 .designation {
   font-size: 51px;
-  color: #004e97;
+  color:#2563d6;
 }
 
 .creative-section5 {
@@ -4245,7 +4287,6 @@ th {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  /* Black overlay with 60% opacity */
   z-index: 1;
 }
 
@@ -13804,7 +13845,7 @@ th {
 }
 
 /*[ Posts ]
-//////////////////////////////////////////////////////////////////*/
+////////////////////////////////////////////////////////////====================================================================================//////*/
 /*\
  *
  * Layout 1
@@ -16726,6 +16767,178 @@ th {
  * sec-courses-03
  *
 \*/
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: #fff;
+  border: 0.5px solid #e5e5e5;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s, border-color 0.22s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: #ccc;
+}
+
+.course-card__top {
+  position: relative;
+  height: 130px;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.course-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid #e5e5e5;
+  font-size: 26px;
+}
+
+.course-card__badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.course-card__body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-card__title {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  margin: 0;
+  color: #2563d6;
+}
+
+.course-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.course-card__desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.course-card__footer {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+  border-top: 0.5px solid #e5e5e5;
+  padding-top: 10px;
+}
+
+.course-card__dur {
+  font-size: 11px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+    background-color: #004e97;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+.course-card__btn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 0.5px solid;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.18s;
+}
+
+.course-card__btn:hover {
+  opacity: 0.75;
+}
+
+
+
+.course-card--purple .course-card__icon {
+  color: #534AB7;
+}
+
+.course-card--purple .course-card__badge {
+  background: #CECBF6;
+  color: #3C3489;
+}
+
+.course-card--purple .course-card__btn {
+  background: #EEEDFE;
+  color: #3C3489;
+  border-color: #AFA9EC;
+}
+
+.course-card--teal .course-card__top {
+  background: #E1F5EE;
+}
+
+.course-card--teal .course-card__icon {
+  color: #0F6E56;
+}
+
+.course-card--teal .course-card__badge {
+  background: #9FE1CB;
+  color: #085041;
+}
+
+.course-card--teal .course-card__btn {
+  background: #E1F5EE;
+  color: #085041;
+  border-color: #5DCAA5;
+}
+
+.course-card--coral .course-card__top {
+  background: #FAECE7;
+}
+
+.course-card--coral .course-card__icon {
+  color: #993C1D;
+}
+
+.course-card--coral .course-card__badge {
+  background: #F5C4B3;
+  color: #712B13;
+}
+
+.course-card--coral .course-card__btn {
+  background: #FAECE7;
+  color: #712B13;
+  border-color: #F0997B;
+}
+
 .sec-courses-03 {
   padding-top: 100px;
   padding-bottom: 130px;
@@ -18683,7 +18896,7 @@ form#lostpasswordform .description {
 
 /* ── HERO ── */
 .faq-hero {
-  background-color:#000;
+  background-color: #000;
   padding: 90px 24px 70px;
   text-align: center;
   position: relative;
@@ -18757,7 +18970,7 @@ form#lostpasswordform .description {
 
 /* ── MAIN ── */
 .faq-main {
-  max-width: 860px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 36px 24px 80px;
 }
@@ -18989,7 +19202,51 @@ form#lostpasswordform .description {
 
   .faq-cta {
     padding: 28px 20px;
-   
+
   }
 
+}
+
+.xen-dot {
+  animation: xen-float 1.4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform, opacity;
+}
+
+.xen-dot-1 {
+  animation-delay: 0s;
+}
+
+.xen-dot-2 {
+  animation-delay: 0.22s;
+}
+
+.xen-dot-4 {
+  animation-delay: 0.44s;
+}
+
+@keyframes xen-float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.35;
+  }
+
+  25% {
+    transform: translateY(-14px) scale(0.9);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(0) scale(1.1);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: translateY(-5px) scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.35;
+  }
 }
