@@ -1,53 +1,83 @@
+/* ============================================================
+   XEN EDUCATION — BANNER SLIDER RESPONSIVE CSS
+   ============================================================ */
 
+/* ── DESKTOP: sticky scroll behaviour ── */
+@media (min-width: 992px) {
 
-.xen-banner-slider-wrapper {
+  .xen-banner-slider-wrapper {
     position: relative;
-}
+  }
 
-.xen-banner-slider-wrapper .xen-slide {
+  .xen-banner-slider-wrapper .xen-slide {
     position: sticky;
     top: 0;
     height: 100vh;
     overflow: hidden;
+  }
 
-    z-index: 1;
-}
+  /* z-index stacking so each new slide slides over the previous */
+  .xen-banner-slider-wrapper .xen-slide:nth-child(1) { z-index: 1; }
+  .xen-banner-slider-wrapper .xen-slide:nth-child(2) { z-index: 2; }
+  .xen-banner-slider-wrapper .xen-slide:nth-child(3) { z-index: 3; }
+  .xen-banner-slider-wrapper .xen-slide:nth-child(4) { z-index: 4; }
 
-.xen-banner-slider-wrapper .xen-slide:nth-child(1) {
-    z-index: 1;
-}
-
-.xen-banner-slider-wrapper .xen-slide:nth-child(2) {
-    z-index: 2;
-}
-
-.xen-banner-slider-wrapper .xen-slide:nth-child(3) {
-    z-index: 3;
-}
-
-.xen-banner-slider-wrapper .xen-slide section {
+  .xen-banner-slider-wrapper .xen-slide section {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
-}
+    transform-origin: center top;
+    transition: transform 0.1s linear;
+  }
 
+  /* Disable old carousel arrows/dots (not needed for scroll-based) */
+  .xen-banner-slider-wrapper .xen-slider-arrow,
+  .xen-banner-slider-wrapper .xen-slider-dots {
+    display: none !important;
+  }
 
-.xen-banner-slider-wrapper .xen-slides-track {
+  /* Disable old flex track (scroll mode replaces it) */
+  .xen-banner-slider-wrapper .xen-slides-track {
     display: block !important;
     transform: none !important;
     transition: none !important;
+  }
 }
 
-.xen-banner-slider-wrapper .xen-slider-arrow,
-.xen-banner-slider-wrapper .xen-slider-dots {
-    display: none !important;
+/* ── TABLET & MOBILE: stack banners normally, no sticky ── */
+@media (max-width: 991px) {
+
+  .xen-banner-slider-wrapper {
+    height: auto !important; /* JS sets this on desktop; override on mobile */
+  }
+
+  .xen-banner-slider-wrapper .xen-slide {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    overflow: visible;
+  }
+
+  .xen-banner-slider-wrapper .xen-slide section {
+    height: auto !important;
+    min-height: 0 !important;
+    transform: none !important;
+    filter: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Show arrow navigation on mobile so users can swipe/tap between banners */
+  .xen-banner-slider-wrapper .xen-slider-arrow {
+    display: flex !important;
+  }
+
+  .xen-banner-slider-wrapper .xen-slider-dots {
+    display: flex !important;
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin: 16px 0;
+  }
 }
-
-.xen-banner-slider-wrapper .xen-slide section {
-    transform-origin: center top;
-    transition: transform 0.1s linear;
-}
-
-
